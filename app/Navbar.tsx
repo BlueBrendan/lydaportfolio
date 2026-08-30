@@ -12,7 +12,6 @@ const links = [
   { href: "/photoelectric", label: "Photoelectric" },
   { href: "/waterColor", label: "Water color" },
   { href: "/before2019", label: "Before 2019" },
-  { href: "/about", label: "About" },
 ];
 
 export default function Navbar() {
@@ -20,23 +19,26 @@ export default function Navbar() {
 
   return (
     <nav className="sticky top-0 z-40 bg-background">
-      <div className="max-w-6xl mx-auto px-14 sm:px-8 h-16 flex items-center justify-center gap-12">
-        {links.map((link) => {
-          const isActive = pathname === link.href;
-          return (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`text-sm sm:text-lg transition-colors select-none ${
-                isActive
-                  ? "text-white font-bold"
-                  : "text-gray-700 hover:text-white/90"
-              }`}
-            >
-              {link.label}
-            </Link>
-          );
-        })}
+      <div className="max-w-6xl mx-auto px-3 sm:px-8 min-h-20 flex items-center justify-center">
+        <div className="grid grid-cols-4 sm:flex sm:items-center sm:justify-center gap-x-4 gap-y-3 sm:gap-5">
+          {links.map((link) => {
+            const isActive = pathname === link.href;
+
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`w-19 sm:w-25 text-center text-xs sm:text-base transition-colors select-none text-center ${
+                  isActive
+                    ? "text-white font-bold"
+                    : "text-gray-700 hover:text-white/90"
+                }`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
+        </div>
       </div>
     </nav>
   );
