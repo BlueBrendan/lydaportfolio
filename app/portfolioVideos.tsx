@@ -1,0 +1,17 @@
+export const portfolioVideos = [
+    {
+        src: "/videos/1.mp4",
+    },
+    { 
+        src: "/videos/2.mp4",
+    },
+    {
+        src: "/videos/3.mp4",
+    },
+    { 
+        src: "/videos/4.mp4",
+    },
+    { 
+        src: "/videos/5.mp4",
+    },
+];
