@@ -28,7 +28,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`w-19 sm:w-25 text-center text-xs sm:text-base transition-colors select-none text-center ${
+                className={`w-14 sm:w-25 text-center text-xs sm:text-base transition-colors select-none text-center ${
                   isActive
                     ? "text-white font-bold"
                     : "text-gray-700 hover:text-white/90"
